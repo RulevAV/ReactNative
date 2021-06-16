@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import type {Node} from 'react';
 import {
   Text,
@@ -8,9 +8,10 @@ import {
 
 
 const App: () => Node = () => {
+  let [title,setTitle] = useState("Hello world");
   return (
     <View style={styles.viewStyle}>
-      <Text style={styles.textStyle}>Hello world</Text>
+      <Text style={styles.textStyle}>{title}</Text>
     </View>
   );
 };
