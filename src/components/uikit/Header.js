@@ -3,12 +3,11 @@ import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 
 const Header = ({title}) => {
   return (
-      <SafeAreaView style={{backgroundColor: '#30defe'}}>
-        <View style={styles.viewStyle}>
-          <Text style={styles.textStyle}>{title}</Text>
-        </View>
-      </SafeAreaView>
-
+    <SafeAreaView style={{backgroundColor: '#30defe'}}>
+      <View style={styles.viewStyle}>
+        <Text style={styles.textStyle}>{title}</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

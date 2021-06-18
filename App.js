@@ -3,6 +3,7 @@ import type {Node} from 'react';
 import Header from './src/components/uikit/Header';
 import {ScrollView, View, StyleSheet} from 'react-native';
 import ImageCard from './src/components/ImageCard';
+import Layout from './src/components/Layout';
 
 const App: () => Node = () => {
   let [title, setTitle] = useState('Hello world');
@@ -16,9 +17,11 @@ const App: () => Node = () => {
       <Header title={title} />
       <ScrollView>
         <View style={container}>
-          {mass.map(u => {
-            return <ImageCard key={u} Title={u} />;
-          })}
+          <Layout>
+            {mass.map(u => {
+              return <ImageCard key={u} Title={u} />;
+            })}
+          </Layout>
         </View>
       </ScrollView>
     </View>
