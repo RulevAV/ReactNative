@@ -1,11 +1,14 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 
 const Header = ({title}) => {
   return (
-    <View style={styles.viewStyle}>
-      <Text style={styles.textStyle}>{title}</Text>
-    </View>
+      <SafeAreaView style={{backgroundColor: '#30defe'}}>
+        <View style={styles.viewStyle}>
+          <Text style={styles.textStyle}>{title}</Text>
+        </View>
+      </SafeAreaView>
+
   );
 };
 const styles = StyleSheet.create({
