@@ -2,20 +2,20 @@ import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {w} from './Constants';
 import i from '../../ava-twitch-32.jpg';
-const ImageCard = () => {
+const ImageCard = ({Title}) => {
   const {h1, cover, container, sub} = styles;
   return (
     <View style={container}>
       <View style={sub}>
         <Image style={cover} source={i} />
       </View>
-      <Text style={h1}>asdwasd</Text>
+      <Text style={h1}>{Title}</Text>
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'gold',
+    //backgroundColor: 'gold',
     width: w / 2.1,
   },
   sub: {
